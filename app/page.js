@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./Components/Navbar";
+import CelebrateHeader from "./Components/CelebrateHeader";
+import HeroSection from "./Components/HeroSection";
+import StickyHeader from "./Components/StickyHeader";
+import SecondSection from "./Components/SecondSection";
+import ThirdSection from "./Components/ThirdSection";
 
-const page = () => {
+const Page = () => {
   return (
-    <div>iphone</div>
-  )
-}
+    <div className="relative">
+      <Navbar />
+      <CelebrateHeader />
+      <HeroSection />
+      <StickyHeader />
+      <SecondSection />
+      <ThirdSection />
+    </div>
+  );
+};
 
-export default page
+export default Page;
