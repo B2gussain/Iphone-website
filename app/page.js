@@ -5,6 +5,7 @@ import HeroSection from "./Components/HeroSection";
 import StickyHeader from "./Components/StickyHeader";
 import SecondSection from "./Components/SecondSection";
 import ThirdSection from "./Components/ThirdSection";
+import ForthSection from "./Components/ForthSection";
 
 const Page = () => {
   return (
@@ -15,6 +16,7 @@ const Page = () => {
       <StickyHeader />
       <SecondSection />
       <ThirdSection />
+      <ForthSection/>
     </div>
   );
 };
