@@ -6,6 +6,8 @@ import StickyHeader from "./Components/StickyHeader";
 import SecondSection from "./Components/SecondSection";
 import ThirdSection from "./Components/ThirdSection";
 import ForthSection from "./Components/ForthSection";
+import FifthSection from "./Components/FifthSection";
+import SixthSection from "./Components/SixthSection";
 
 const Page = () => {
   return (
@@ -17,6 +19,8 @@ const Page = () => {
       <SecondSection />
       <ThirdSection />
       <ForthSection/>
+      <FifthSection/>
+      <SixthSection/>
     </div>
   );
 };
