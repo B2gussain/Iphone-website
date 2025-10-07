@@ -8,6 +8,9 @@ import ThirdSection from "./Components/ThirdSection";
 import ForthSection from "./Components/ForthSection";
 import FifthSection from "./Components/FifthSection";
 import SixthSection from "./Components/SixthSection";
+import SeventhSection from "./Components/SeventhSection";
+import EightSection from "./Components/EightSection";
+import NinthSection from "./Components/NinthSection";
 
 const Page = () => {
   return (
@@ -21,6 +24,9 @@ const Page = () => {
       <ForthSection/>
       <FifthSection/>
       <SixthSection/>
+      <SeventhSection/>
+      <EightSection/>
+      <NinthSection/>
     </div>
   );
 };

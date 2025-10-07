@@ -24,7 +24,17 @@ const FifthSection = () => {
   const scrollToButton = (index) => {
     const container = containerRef.current;
     const button = container.children[index];
-    button.scrollIntoView({ behavior: "smooth", inline: "center" });
+    
+    // Use scrollLeft instead of scrollIntoView to prevent vertical scrolling
+    const containerRect = container.getBoundingClientRect();
+    const buttonRect = button.getBoundingClientRect();
+    
+    const scrollLeft = button.offsetLeft - (container.offsetWidth - button.offsetWidth) / 2;
+    
+    container.scrollTo({
+      left: scrollLeft,
+      behavior: "smooth"
+    });
   };
 
   return (
@@ -70,12 +80,16 @@ const FifthSection = () => {
         <div
           ref={containerRef}
           className="flex gap-2 text-white bg-[#333336] p-2 rounded-full overflow-x-scroll md:overflow-x-hidden hide-scrollbar scroll-smooth w-full px-12 md:px-2 " 
-          /* px-12 adds extra space for arrows */
         >
           {options.map((item) => (
             <button
               key={item}
-              onClick={() => setactive(item)}
+              onClick={() => {
+                setactive(item);
+                // Also scroll to the button when directly clicked
+                const index = options.indexOf(item);
+                scrollToButton(index);
+              }}
               className={`px-3 py-2 whitespace-nowrap font-semibold rounded-full ${
                 active === item ? "bg-white text-black" : ""
               }`}
