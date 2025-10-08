@@ -3,8 +3,8 @@ import React from 'react'
 
 const ElevenSection = () => {
   return (
-    <div className='bg-[#F5F5F7] p-16 flex flex-col gap-8'>
-        <h2 className='text-5xl font-bold text-black'>iPhone 17 Pro and the environment.</h2>
+    <div className='bg-[#F5F5F7] p-10 md:p-16 flex flex-col gap-8'>
+        <h2 className='text-4xl md:text-5xl font-bold text-black'>iPhone 17 Pro and the environment.</h2>
         <p className='text-[#0043fa]'>Learn more in our Product Environmental Report (PDF)</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  justify-center item-center">
             <div className='flex gap-4 relative flex-col p-8 bg-white shadow-md rounded-2xl'>

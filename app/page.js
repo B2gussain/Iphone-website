@@ -13,6 +13,8 @@ import EightSection from "./Components/EightSection";
 import NinthSection from "./Components/NinthSection";
 import TenthSection from "./Components/TenthSection";
 import ElevenSection from "./Components/ElevenSection";
+import TwelvthSection from "./Components/TwelvthSection";
+import Footer from "./Components/Footer";
 
 const Page = () => {
   return (
@@ -31,6 +33,8 @@ const Page = () => {
       <NinthSection/>
       <TenthSection/>
       <ElevenSection/>
+      <TwelvthSection/>
+      <Footer/>
     </div>
   );
 };
