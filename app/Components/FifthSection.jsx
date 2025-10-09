@@ -25,7 +25,6 @@ const FifthSection = () => {
     const container = containerRef.current;
     const button = container.children[index];
     
-    // Use scrollLeft instead of scrollIntoView to prevent vertical scrolling
     const containerRect = container.getBoundingClientRect();
     const buttonRect = button.getBoundingClientRect();
     
@@ -66,9 +65,7 @@ const FifthSection = () => {
         )}
       </div>
 
-      {/* Buttons with scroll & arrows */}
       <div className="relative w-[90%] md:w-auto flex items-center">
-        {/* Left arrow */}
         <button
           onClick={handlePrev}
           className="absolute left-1 z-10 p-3 bg-[#555555] rounded-full md:hidden"
@@ -76,7 +73,6 @@ const FifthSection = () => {
           <ChevronLeft size={20} color="white" />
         </button>
 
-        {/* Scrollable buttons */}
         <div
           ref={containerRef}
           className="flex gap-2 text-white bg-[#333336] p-2 rounded-full overflow-x-scroll md:overflow-x-hidden hide-scrollbar scroll-smooth w-full px-12 md:px-2 " 
@@ -86,7 +82,6 @@ const FifthSection = () => {
               key={item}
               onClick={() => {
                 setactive(item);
-                // Also scroll to the button when directly clicked
                 const index = options.indexOf(item);
                 scrollToButton(index);
               }}
@@ -99,7 +94,6 @@ const FifthSection = () => {
           ))}
         </div>
 
-        {/* Right arrow */}
         <button
           onClick={handleNext}
           className="absolute right-1 z-10 p-3 bg-[#555555] rounded-full md:hidden"

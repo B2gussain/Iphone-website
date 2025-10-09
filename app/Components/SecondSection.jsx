@@ -9,7 +9,6 @@ import { Pagination, Autoplay } from "swiper/modules";
 const SecondSection = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-    // ✅ Only check window size once (or on resize if you want)
     useEffect(() => {
         if (typeof window !== "undefined") {
             setIsLargeScreen(window.innerWidth > 768);
@@ -52,7 +51,6 @@ const SecondSection = () => {
 
     return (
         <div className="bg-[#1D1D1F] py-16">
-            {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-end px-6 justify-between mb-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-white">
                     Get the highlights.

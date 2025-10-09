@@ -22,12 +22,10 @@ const SeventhSection = () => {
 
   return (
     <div className="bg-[#000000] md:pl-8 ">
-      {/* Header */}
       <h2 className="text-2xl md:text-4xl ml-6 font-bold text-white mb-8">
         Pro results down to the pixel.
       </h2>
 
-      {/* Unified scroll section for all screen sizes */}
       <div className="overflow-x-auto pb-10 hide-scrollbar">
         <div className="flex gap-3 px-6 min-w-max">
           {images.map((item, idx) => (

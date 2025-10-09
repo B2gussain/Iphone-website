@@ -2,25 +2,25 @@
 import React, { useEffect, useState } from "react";
 
 const HeroSection = () => {
-  const [imgSrc, setImgSrc] = useState("/images/logo_gif.gif"); // Initial placeholder image
+  const [imgSrc, setImgSrc] = useState("/images/logo_gif.gif");
 
   useEffect(() => {
-    // Function to check screen size and update image
+   
     const handleResize = () => {
       if (window.innerWidth < 735) {
-        setImgSrc("/images/hero_endframe_mobile.jpg"); // 👉 mobile version
+        setImgSrc("/images/hero_endframe_mobile.jpg"); 
       } else {
-        setImgSrc("/images/hero_endframe.jpg"); // 👉 desktop version
+        setImgSrc("/images/hero_endframe.jpg");
       }
     };
 
-    // Initial check
+    
     handleResize();
 
-    // Listen for screen resize
+  
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener
+   
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
